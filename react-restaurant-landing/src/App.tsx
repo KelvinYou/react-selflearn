@@ -1,33 +1,37 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Header from './components/Header'
+import StoreIcon from '@mui/icons-material/Store';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+      <a href="" className="navbar-brand p-0">
+        <h1 className="text-primary m-0"><StoreIcon /> Restaurant</h1>
+      </a>
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span className="fa fa-bars"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarCollapse">
+        <div className="navbar-nav ms-auto py-0 pe-4">
+          <a href="index.html" className="nav-item nav-link active">Home</a>
+          <a href="about.html" className="nav-item nav-link">About</a>
+          {/* <a href="service.html" className="nav-item nav-link">Service</a>
+          <a href="menu.html" className="nav-item nav-link">Menu</a>
+          <div className="nav-item dropdown">
+            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+            <div className="dropdown-menu m-0">
+              <a href="booking.html" className="dropdown-item">Booking</a>
+              <a href="team.html" className="dropdown-item">Our Team</a>
+              <a href="testimonial.html" className="dropdown-item">Testimonial</a>
+            </div>
+          </div>
+          <a href="contact.html" className="nav-item nav-link">Contact</a> */}
+        </div>
+        {/* <a href="" className="btn btn-primary py-2 px-4">Book A Table</a> */}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    </nav>
   )
 }
 
