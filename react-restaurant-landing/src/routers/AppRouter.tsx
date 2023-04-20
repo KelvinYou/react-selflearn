@@ -7,15 +7,20 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <Header />
-        <Routes>
-          {routes.map((route, index) => (
-            <Route
-              key={index}
-              path={route.path}
-              element={<route.component />}
-            />
-          ))}
-        </Routes>
+      
+      <Routes>
+        {routes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={
+              <>
+                <route.component />
+              </>
+          }
+          />
+        ))}
+      </Routes>
     </BrowserRouter>
   )
 }
