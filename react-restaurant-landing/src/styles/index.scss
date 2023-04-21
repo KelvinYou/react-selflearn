@@ -9,16 +9,16 @@
 /* Set the color of the scroll bar */
 ::-webkit-scrollbar {
   background-color: $dark-color;
-  width: 10px;
+  width: 8px;
 }
 
 /* Set the style of the thumb */
 ::-webkit-scrollbar-thumb {
   background-color: $primary-color;
-  border-radius: 30px;
+  border-radius: 8px;
 }
 
 /* Set the style of the track */
 ::-webkit-scrollbar-track {
-  background-color: $dark-color;
+  // background-color: $dark-color;
 }
