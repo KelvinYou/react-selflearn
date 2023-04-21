@@ -7,6 +7,26 @@ import { ABOUT_PATH, HOME_PATH } from './../../contants/routes';
 import MenuIcon from '@mui/icons-material/Menu';
 import StoreIcon from '@mui/icons-material/Store';
 
+import "./Header.scss";
+import HomeHero from './heros/HomeHero';
+import AboutHero from './heros/AboutHero';
+
+interface navbarItemProps {
+  name: string,
+  path: any,
+}
+
+const navbarItems: navbarItemProps[] = [
+  {
+    name: "Home",
+    path: HOME_PATH
+  },
+  {
+    name: "About",
+    path: ABOUT_PATH
+  }
+]
+
 const Header: FC = () => {
   const navigate = useNavigate();
   const headerSize = "lg";
@@ -15,46 +35,59 @@ const Header: FC = () => {
   const [expand, setExpanded] = useState(false);
   
   const handleNavigate = (path: string) => {
-    console.info("expand: " + expand);
     setExpanded(false);
-    console.info("expand: " + expand);
     navigate(path);
   }
+  
+  const currentActivePath = location.pathname;
 
   return (
-    <Navbar expand= { headerSize } expanded={expand} className="navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-      <Container fluid>
-        <Navbar.Brand href="" className="navbar-brand"><StoreIcon /> { brandName }</Navbar.Brand>
+    <div className="navbar-and-hero">
+      <Navbar 
+        expand= { headerSize } 
+        expanded={expand} 
+        className="navbar-dark px-4 px-lg-5 py-3 py-lg-0"
+      >
+        <Container fluid>
+          <Navbar.Brand href="" className="navbar-brand">
+            <StoreIcon /> <span className="brand-name">{ brandName }</span>
+          </Navbar.Brand>
 
-        <Navbar.Toggle 
-          aria-controls={`offcanvasNavbar-expand-${ headerSize }`} 
-          onClick={() => {
-            setExpanded(expand ? false : true);
-          }}
-        />
-
-        <Navbar.Offcanvas
-            id={`offcanvasNavbar-expand-${ headerSize }`}
-            aria-labelledby={`offcanvasNavbarLabel-expand-${ headerSize }`}
-            placement="end"
+          <Navbar.Toggle 
+            aria-controls={`offcanvasNavbar-expand-${ headerSize }`} 
+            onClick={() => {
+              setExpanded(expand ? false : true);
+            }}
           >
-          
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${ headerSize }`}>
-              { brandName }
-            </Offcanvas.Title>
-          </Offcanvas.Header>
-          
-          <Offcanvas.Body>
-            <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link onClick={() => handleNavigate(HOME_PATH)} className="nav-link">Home</Nav.Link>
-              <Nav.Link onClick={() => handleNavigate(ABOUT_PATH)} className="nav-link">About</Nav.Link>
+            <span></span>
+            <span></span>
+            <span></span>
+          </Navbar.Toggle>
+
+          <Navbar.Collapse id="navbar-collapse">
+            <Nav className="ms-auto" defaultActiveKey="#home">
+              {navbarItems.map((navbarItem, index) => (
+                <Nav.Item>
+                  <Nav.Link 
+                    onClick={() => handleNavigate(navbarItem.path)} 
+                    className={currentActivePath == navbarItem.path ? 
+                      "nav-link-active" : "nav-link-inactive"
+                    }>
+                      { navbarItem.name }
+                    </Nav.Link>
+                </Nav.Item>
+              ))}
             </Nav>
-          </Offcanvas.Body>
-        </Navbar.Offcanvas>
-      </Container>
+          </Navbar.Collapse>
+
+        </Container>
+        
+      </Navbar>
+      {currentActivePath === HOME_PATH && <HomeHero />}
+      {currentActivePath === ABOUT_PATH && <AboutHero />}
       
-    </Navbar>
+    </div>
+    
   )
 }
 
