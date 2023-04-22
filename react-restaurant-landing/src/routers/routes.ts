@@ -1,6 +1,7 @@
-import Home from "../pages/Home";
-import About from "../pages/About";
+import Home from "./../pages/Home";
+import About from "./../pages/About";
 import * as ROUTES from "./../contants/routes";
+import Services from "./../pages/Services";
 
 interface RouteType {
   path: string;
@@ -20,6 +21,12 @@ const routes: RouteType[] = [
     path: ROUTES.ABOUT_PATH,
     component: About,
     name: "About",
+    protected: false,
+  },
+  {
+    path: ROUTES.SERVICES_PATH,
+    component: Services,
+    name: "Services",
     protected: false,
   },
 ];

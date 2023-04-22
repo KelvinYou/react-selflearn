@@ -2,7 +2,7 @@ import React, { FC, useRef, useState } from 'react'
 
 import { Button, Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { ABOUT_PATH, HOME_PATH } from './../../contants/routes';
+import { ABOUT_PATH, HOME_PATH, SERVICES_PATH } from './../../contants/routes';
 
 import MenuIcon from '@mui/icons-material/Menu';
 import StoreIcon from '@mui/icons-material/Store';
@@ -10,6 +10,7 @@ import StoreIcon from '@mui/icons-material/Store';
 import "./Header.scss";
 import HomeHero from './heros/HomeHero';
 import AboutHero from './heros/AboutHero';
+import ServicesHero from './heros/ServicesHero';
 
 interface navbarItemProps {
   name: string,
@@ -24,6 +25,10 @@ const navbarItems: navbarItemProps[] = [
   {
     name: "About",
     path: ABOUT_PATH
+  },
+  {
+    name: "Services",
+    path: SERVICES_PATH
   }
 ]
 
@@ -67,7 +72,7 @@ const Header: FC = () => {
           <Navbar.Collapse id="navbar-collapse">
             <Nav className="ms-auto" defaultActiveKey="#home">
               {navbarItems.map((navbarItem, index) => (
-                <Nav.Item>
+                <Nav.Item key={index}>
                   <Nav.Link 
                     onClick={() => handleNavigate(navbarItem.path)} 
                     className={currentActivePath == navbarItem.path ? 
@@ -85,6 +90,7 @@ const Header: FC = () => {
       </Navbar>
       {currentActivePath === HOME_PATH && <HomeHero />}
       {currentActivePath === ABOUT_PATH && <AboutHero />}
+      {currentActivePath === SERVICES_PATH && <ServicesHero />}
       
     </div>
     

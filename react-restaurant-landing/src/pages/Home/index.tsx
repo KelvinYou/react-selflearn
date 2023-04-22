@@ -1,11 +1,14 @@
 import React from 'react'
 import homeHero from "./../../assets/home/hero.png";
 import "./Home.scss";
+import ServicesItem from '../Services/ServicesItem';
 
 const Home = () => {
   return (
-    <div className="">
-      some text
+    <div className="container-xxl py-5">
+      <div className="container">
+        <ServicesItem num={4} />
+      </div>
     </div>
   )
 }
