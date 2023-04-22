@@ -1,5 +1,6 @@
 import React from 'react'
 import homeHero from "./../../../assets/home/hero.png";
+import Button from "@mui/material/Button";
 import "./heros.scss";
 
 const HomeHero = () => {
@@ -18,9 +19,9 @@ const HomeHero = () => {
                 paragraph paragraph paragraph
                 paragraph paragraph paragraph
                 paragraph paragraph paragraph
-                paragraph paragraph paragraph
               </p>
-              <a href="" className="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
+
+              <Button variant="contained">Book A Table</Button>
             </div>
             <div className="col-lg-6 text-center text-lg-end overflow-hidden">
               <img className="img-fluid" src={homeHero} alt="" />
