@@ -4,7 +4,9 @@ import MenuContent from './MenuContent'
 const Menu = () => {
   return (
     <div className="container-xxl py-5">
-      <MenuContent />
+      <div className="container">
+        <MenuContent />
+      </div>
     </div>
 
   )

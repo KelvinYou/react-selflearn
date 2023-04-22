@@ -4,10 +4,14 @@ import "./Home.scss";
 
 import ServicesItem from '../Services/ServicesItem';
 import AboutDetails from '../About/AboutDetails';
+import MenuContent from '../Menu/MenuContent';
+import ReservationForm from './../Booking/ReservationForm';
+import MasterChef from '../About/MasterChef';
+import Testimonial from '../Testimonial/Testimonial';
 
 const Home = () => {
   return (
-    <div className="container-xxl py-5">
+    <>
       <div className="container">
         <ServicesItem num={4} />
       </div>
@@ -15,7 +19,21 @@ const Home = () => {
       <div className="container">
         <AboutDetails />
       </div>
-    </div>
+
+      <div className="container">
+        <MenuContent />
+      </div>
+
+      <ReservationForm />
+
+      <div className="container">
+        <MasterChef />
+      </div>
+
+      <div className="container">
+        <Testimonial />
+      </div>
+    </>
   )
 }
 

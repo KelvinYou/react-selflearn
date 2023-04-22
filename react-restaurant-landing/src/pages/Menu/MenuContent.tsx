@@ -71,7 +71,7 @@ const MenuContent = () => {
   const currency = "RM";
 
   return (
-    <div className="container"> 
+    <> 
       <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
         <h5 className="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
         <h1 className="mb-5">Most Popular Items</h1>
@@ -127,7 +127,7 @@ const MenuContent = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
     
   )
 }

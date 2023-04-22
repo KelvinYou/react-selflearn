@@ -3,6 +3,7 @@ import About from "./../pages/About";
 import * as ROUTES from "./../contants/routes";
 import Services from "./../pages/Services";
 import Menu from "../pages/Menu";
+import Contact from "../pages/Contact";
 
 interface RouteType {
   path: string;
@@ -34,6 +35,12 @@ const routes: RouteType[] = [
     path: ROUTES.MENU_PATH,
     component: Menu,
     name: "Menu",
+    protected: false,
+  },
+  {
+    path: ROUTES.CONTACT_PATH,
+    component: Contact,
+    name: "Contact",
     protected: false,
   },
 ];
