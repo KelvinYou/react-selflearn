@@ -2,7 +2,7 @@ import React, { FC, useRef, useState } from 'react'
 
 import { Button, Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { ABOUT_PATH, HOME_PATH, SERVICES_PATH } from './../../contants/routes';
+import { ABOUT_PATH, CONTACT_PATH, HOME_PATH, MENU_PATH, SERVICES_PATH } from './../../contants/routes';
 
 import MenuIcon from '@mui/icons-material/Menu';
 import StoreIcon from '@mui/icons-material/Store';
@@ -11,6 +11,8 @@ import "./Header.scss";
 import HomeHero from './heros/HomeHero';
 import AboutHero from './heros/AboutHero';
 import ServicesHero from './heros/ServicesHero';
+import MenuHero from './heros/MenuHero';
+import ContactHero from './heros/ContactHero';
 
 interface navbarItemProps {
   name: string,
@@ -29,6 +31,14 @@ const navbarItems: navbarItemProps[] = [
   {
     name: "Services",
     path: SERVICES_PATH
+  },
+  {
+    name: "Menu",
+    path: MENU_PATH
+  },
+  {
+    name: "Contact",
+    path: CONTACT_PATH
   }
 ]
 
@@ -91,6 +101,8 @@ const Header: FC = () => {
       {currentActivePath === HOME_PATH && <HomeHero />}
       {currentActivePath === ABOUT_PATH && <AboutHero />}
       {currentActivePath === SERVICES_PATH && <ServicesHero />}
+      {currentActivePath === MENU_PATH && <MenuHero />}
+      {currentActivePath === CONTACT_PATH && <ContactHero />}
       
     </div>
     
