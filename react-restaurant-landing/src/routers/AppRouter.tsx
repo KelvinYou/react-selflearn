@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import routes from './routes';
+import Footer from './../components/Footer';
 
 const AppRouter = () => {
   return (
@@ -21,6 +22,8 @@ const AppRouter = () => {
           />
         ))}
       </Routes>
+
+      <Footer />
     </BrowserRouter>
   )
 }
