@@ -7,6 +7,8 @@ import AboutImg2 from "./../../assets/about/about-2.jpg";
 import AboutImg3 from "./../../assets/about/about-3.jpg";
 import AboutImg4 from "./../../assets/about/about-4.jpg";
 
+import "./About.scss";
+
 const AboutDetails = () => {
   return (
     <div className="container-xxl py-5">
@@ -54,7 +56,7 @@ const AboutDetails = () => {
               </div>
             </div>
 
-            <Button variant="contained" className="py-3 px-5 mt-2">Read More</Button>
+            <Button variant="contained" className="py-3 px-5 mt-2 read-more-button">Read More</Button>
           </div>
         </div>
       </div>

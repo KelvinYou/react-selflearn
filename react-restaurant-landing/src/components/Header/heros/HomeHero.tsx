@@ -21,7 +21,9 @@ const HomeHero = () => {
                 paragraph paragraph paragraph
               </p>
 
-              <Button variant="contained">Book A Table</Button>
+              <Button variant="contained" className="py-3 px-5 mt-2 book-table-button">
+                Book A Table
+              </Button>
             </div>
             <div className="col-lg-6 text-center text-lg-end overflow-hidden">
               <img className="img-fluid" src={homeHero} alt="" />

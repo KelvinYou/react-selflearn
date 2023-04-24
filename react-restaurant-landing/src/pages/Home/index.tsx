@@ -12,7 +12,7 @@ import Testimonial from '../Testimonial/Testimonial';
 const Home = () => {
   return (
     <>
-      <div className="container">
+      <div className="container mt-5">
         <ServicesItem num={4} />
       </div>
 
