@@ -1,5 +1,10 @@
 @import "./../../styles/base/colors.scss";
 
+.num-container {
+  opacity: 1;
+  border-color: $primary-color !important;
+}
+
 .read-more-button {
-  background-color: $primary-color;
+  background-color: $primary-color !important;
 }

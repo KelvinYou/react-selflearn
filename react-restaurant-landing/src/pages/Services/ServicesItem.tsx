@@ -1,10 +1,11 @@
 import React, { FC } from 'react'
 
+import "./Services.scss";
+
 interface ServicesItemInterface {
   num: number
 }
 
-import "./Services.scss";
 
 interface servicesItemProps {
   title: string,

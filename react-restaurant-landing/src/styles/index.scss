@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 @import "./base/colors.scss";
+@import "./abstracts/animates.scss";
 
 * {
   font-family: 'Poppins', sans-serif;
@@ -22,3 +23,7 @@
 // ::-webkit-scrollbar-track {
 //   background-color: $dark-color;
 // }
+.secondary-title {
+  font-family: 'Pacifico', cursive;
+  color: $primary-color;
+}
