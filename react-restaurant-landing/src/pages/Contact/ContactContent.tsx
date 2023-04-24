@@ -1,8 +1,9 @@
 import React from 'react'
+import FadeInSection from '../../components/FadeInSection'
 
 const ContactContent = () => {
   return (
-    <div>
+    <FadeInSection>
       <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
         <h5 className="section-title ff-secondary text-center text-primary fw-normal">Contact Us</h5>
         <h1 className="mb-5">Contact For Any Query</h1>
@@ -66,7 +67,7 @@ const ContactContent = () => {
           </div>
         </div>
       </div>
-    </div>
+    </FadeInSection>
   )
 }
 

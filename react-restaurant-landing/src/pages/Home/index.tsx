@@ -20,9 +20,7 @@ const Home = () => {
         <AboutDetails />
       </div>
 
-      <div className="container">
-        <MenuContent />
-      </div>
+      <MenuContent />
 
       <ReservationForm />
 
