@@ -1,0 +1,11 @@
+@import "./../../styles/base/colors.scss";
+
+.book-button {
+  background-color: $primary-color;
+  color: $light-color;
+
+  &:hover {
+    background-color: $primary-color;
+    color: $light-color;
+  }
+}
