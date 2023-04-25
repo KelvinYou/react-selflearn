@@ -1,5 +1,13 @@
 @import "./../../styles/base/colors.scss";
 
+.reservation-image img {
+  width: auto;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+
+
 .book-button {
   background-color: $primary-color;
   color: $light-color;

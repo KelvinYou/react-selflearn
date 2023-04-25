@@ -54,7 +54,8 @@ const Header: FC = () => {
     navigate(path);
   }
   
-  const currentActivePath = location.pathname;
+  // const currentActivePath = location.location;
+  const currentActivePath = location.hash;
 
   return (
     <div className="navbar-and-hero">
@@ -98,11 +99,11 @@ const Header: FC = () => {
         </Container>
         
       </Navbar>
-      {currentActivePath === HOME_PATH && <HomeHero />}
-      {currentActivePath === ABOUT_PATH && <AboutHero />}
-      {currentActivePath === SERVICES_PATH && <ServicesHero />}
-      {currentActivePath === MENU_PATH && <MenuHero />}
-      {currentActivePath === CONTACT_PATH && <ContactHero />}
+      {currentActivePath === "#" + HOME_PATH && <HomeHero />}
+      {currentActivePath === "#" + ABOUT_PATH && <AboutHero />}
+      {currentActivePath === "#" + SERVICES_PATH && <ServicesHero />}
+      {currentActivePath === "#" + MENU_PATH && <MenuHero />}
+      {currentActivePath === "#" + CONTACT_PATH && <ContactHero />}
       
     </div>
     

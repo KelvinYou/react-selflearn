@@ -11,7 +11,7 @@ const ReservationForm = () => {
       <div className="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
         <div className="row g-0">
           <div className="col-md-6">
-            <div className="video">
+            <div className="reservation-image">
               <img src={ VideoImage } />
             </div>
           </div>

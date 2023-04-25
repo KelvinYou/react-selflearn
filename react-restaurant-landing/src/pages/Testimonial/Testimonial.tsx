@@ -46,7 +46,7 @@ const Testimonial = () => {
       <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div className="container">
             <div className="text-center">
-                <h5 className="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
+                <h5 className="section-title secondary-title text-center fw-normal">Testimonial</h5>
                 <h1 className="mb-5">Our Clients Say!!!</h1>
             </div>
             <div className="owl-carousel testimonial-carousel">
