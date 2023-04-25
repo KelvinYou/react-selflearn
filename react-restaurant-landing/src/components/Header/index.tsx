@@ -55,7 +55,7 @@ const Header: FC = () => {
   }
   
   // const currentActivePath = location.location;
-  const currentActivePath = location.hash.replace("#/", "");
+  const currentActivePath = location.hash.replace("#", "");
 
   return (
     <div className="navbar-and-hero">
