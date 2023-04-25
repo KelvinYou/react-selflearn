@@ -52,10 +52,12 @@ const Header: FC = () => {
   const handleNavigate = (path: string) => {
     setExpanded(false);
     navigate(path);
+
+    console.info("")
   }
   
   // const currentActivePath = location.location;
-  const currentActivePath = location.hash.replace("#", "");
+  const currentActivePath = location.hash;
 
   return (
     <div className="navbar-and-hero">
@@ -99,11 +101,11 @@ const Header: FC = () => {
         </Container>
         
       </Navbar>
-      {currentActivePath === HOME_PATH && <HomeHero />}
-      {currentActivePath === ABOUT_PATH && <AboutHero />}
-      {currentActivePath === SERVICES_PATH && <ServicesHero />}
-      {currentActivePath === MENU_PATH && <MenuHero />}
-      {currentActivePath === CONTACT_PATH && <ContactHero />}
+      {(currentActivePath === "" || currentActivePath === "#/") && <HomeHero />}
+      {currentActivePath.includes(ABOUT_PATH) && <AboutHero />}
+      {currentActivePath.includes(SERVICES_PATH) && <ServicesHero />}
+      {currentActivePath.includes(MENU_PATH) && <MenuHero />}
+      {currentActivePath.includes(CONTACT_PATH) && <ContactHero />}
       
     </div>
     
