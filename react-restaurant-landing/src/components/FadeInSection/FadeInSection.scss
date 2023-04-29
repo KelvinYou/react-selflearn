@@ -4,6 +4,9 @@ section {
   visibility: hidden;
   transition: opacity 300ms ease-out, transform 300ms ease-out;
   will-change: opacity, visibility;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .is-visible {

@@ -73,13 +73,15 @@ const MenuContent = () => {
   const currency = "RM";
 
   return (
-    <FadeInSection>
       <Container> 
+        <FadeInSection>
+
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
           <h5 className="section-title secondary-title text-center fw-normal">Food Menu</h5>
           <h1 className="mb-5">Most Popular Items</h1>
         </div>
-
+        </FadeInSection>
+        <FadeInSection>
         <div className="tab-className text-center wow fadeInUp" data-wow-delay="0.1s">
           <ul className="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
             <li className="nav-item">
@@ -130,8 +132,8 @@ const MenuContent = () => {
             </div>
           </div>
         </div>
+        </FadeInSection>
       </Container>
-    </FadeInSection>
 
     
   )

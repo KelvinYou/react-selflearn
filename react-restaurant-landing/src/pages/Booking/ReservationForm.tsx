@@ -1,6 +1,9 @@
 import React from 'react'
 import VideoImage from "./../../assets/home/video.jpg";
 import FadeInSection from '../../components/FadeInSection';
+import { Button } from '@mui/material';
+
+import "./Booking.scss";
 
 const ReservationForm = () => {
   return (
@@ -8,13 +11,13 @@ const ReservationForm = () => {
       <div className="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
         <div className="row g-0">
           <div className="col-md-6">
-            <div className="video">
+            <div className="reservation-image">
               <img src={ VideoImage } />
             </div>
           </div>
           <div className="col-md-6 bg-dark d-flex align-items-center">
             <div className="p-5 wow fadeInUp" data-wow-delay="0.2s">
-              <h5 className="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
+              <h5 className="section-title secondary-title text-start fw-normal">Reservation</h5>
               <h1 className="text-white mb-4">Book A Table Online</h1>
               <form>
                 <div className="row g-3">
@@ -53,7 +56,13 @@ const ReservationForm = () => {
                     </div>
                   </div>
                   <div className="col-12">
-                    <button className="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                    <Button 
+                      className="book-button w-100 py-3" 
+                      variant="contained"
+                      // type="submit"
+                    >
+                      Book Now
+                    </Button>
                   </div>
                 </div>
               </form>

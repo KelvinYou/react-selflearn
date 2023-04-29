@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from '../components/Header';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import routes from './routes';
 import Footer from './../components/Footer';
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Header />
       
       <Routes>
@@ -24,7 +24,7 @@ const AppRouter = () => {
       </Routes>
 
       <Footer />
-    </BrowserRouter>
+    </Router>
   )
 }
 
