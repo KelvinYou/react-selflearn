@@ -81,9 +81,9 @@ const MenuContent = () => {
           <h1 className="mb-5">Most Popular Items</h1>
         </div>
         </FadeInSection>
+        
         <div className="tab-className text-center wow fadeInUp" data-wow-delay="0.1s">
           <FadeInSection>
-
             <ul className="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
               <li className="nav-item">
                 <a className="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">

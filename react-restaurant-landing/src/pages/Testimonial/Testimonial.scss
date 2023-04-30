@@ -1,0 +1,15 @@
+@import "./../../styles/base/colors.scss";
+
+.testimonial-item,
+.testimonial-item * {
+    transition: .5s;
+}
+
+.testimonial-item {
+    background: $primary-color !important;
+    border-color: $primary-color !important;
+}
+
+.testimonial-item * {
+    color: $light-color !important;
+}
