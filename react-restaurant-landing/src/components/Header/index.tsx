@@ -48,13 +48,23 @@ const Header: FC = () => {
   const brandName = "Restaurant";
 
   const [expand, setExpanded] = useState(false);
-
+  const [navColour, setNavColour] = useState(false);
     // const currentActivePath = location.location;
 
   const handleNavigate = (path: string) => {
     setExpanded(false);
     navigate(path);
   }
+
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      setNavColour(true);
+    } else {
+      setNavColour(false);
+    }
+  }
+
+  window.addEventListener("scroll", scrollHandler);
   
   const currentActivePath = location.hash.replace("#", "");
 
@@ -62,8 +72,9 @@ const Header: FC = () => {
     <div className="navbar-and-hero">
       <Navbar 
         expand= { headerSize } 
+        // fixed="top"
         expanded={expand} 
-        className="navbar-dark px-4 px-lg-5 py-3 py-lg-0"
+        className={`navbar-dark px-4 px-lg-5 py-3 py-lg-0 ${navColour ? "sticky" : "navbar"}`}
       >
         <Container fluid>
           <Navbar.Brand href="" className="navbar-brand">
@@ -100,7 +111,7 @@ const Header: FC = () => {
         </Container>
         
       </Navbar>
-      {currentActivePath === HOME_PATH && <HomeHero />}
+      {(currentActivePath === HOME_PATH || currentActivePath === "") && <HomeHero />}
       {currentActivePath === ABOUT_PATH && <AboutHero />}
       {currentActivePath === SERVICES_PATH && <ServicesHero />}
       {currentActivePath === MENU_PATH && <MenuHero />}

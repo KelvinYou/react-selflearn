@@ -2,13 +2,13 @@ import React from 'react'
 import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 
 import "./Footer.scss";
+import socialMediaItems from './socialMediaItems';
 
 const FooterSymbol = () => {
   let date = new Date();
@@ -24,46 +24,18 @@ const FooterSymbol = () => {
           </Col>
           <Col md="4" className="footer-body">
             <ul className="footer-icons">
-              <li className="social-icons">
-                <a
-                  href="https://kelvinyou.vercel.app/"
-                  style={{ color: "white" }}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <CgProfile />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://github.com/KelvinYou"
-                  style={{ color: "white" }}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/kelvin-you-a29644198/"
-                  style={{ color: "white" }}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/kelvinyou0220/"
-                  style={{ color: "white" }}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
+              {socialMediaItems.map((socialMediaItem, index) => (
+                <li className="social-icons" key={index + socialMediaItem.link}>
+                  <a
+                    href={socialMediaItem.link}
+                    style={{ color: "white" }}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <socialMediaItem.icon />
+                  </a>
+                </li>
+              ))}
             </ul>
           </Col>
         </Row>

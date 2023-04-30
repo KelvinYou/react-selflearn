@@ -2,6 +2,13 @@ import React, { FC } from 'react'
 import FooterSymbol from './FooterSymbol'
 import { Button } from '@mui/material'
 
+import {
+  AiFillGithub,
+  AiFillInstagram,
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
+import socialMediaItems from './socialMediaItems';
 
 const Footer: FC = () => {
   return (
@@ -23,10 +30,17 @@ const Footer: FC = () => {
               <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>+60 12-345 6789</p>
               <p className="mb-2"><i className="fa fa-envelope me-3"></i>info@example.com</p>
               <div className="d-flex pt-2">
-                <a className="btn btn-outline-light btn-social" href=""><i className="fab fa-twitter"></i></a>
-                <a className="btn btn-outline-light btn-social" href=""><i className="fab fa-facebook-f"></i></a>
-                <a className="btn btn-outline-light btn-social" href=""><i className="fab fa-youtube"></i></a>
-                <a className="btn btn-outline-light btn-social" href=""><i className="fab fa-linkedin-in"></i></a>
+                {socialMediaItems.map((socialMediaItem, index) => (
+                <a 
+                  key={index}
+                  className="btn btn-outline-light btn-social" 
+                  target="_blank" 
+                  href={socialMediaItem.link}
+                >
+                  <socialMediaItem.icon />
+                </a>
+
+                ))}
               </div>
             </div>
             <div className="col-lg-3 col-md-6">

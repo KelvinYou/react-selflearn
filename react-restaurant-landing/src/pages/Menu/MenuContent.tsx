@@ -11,6 +11,11 @@ import Menu8 from "./../../assets/menu/menu-8.jpg";
 import { Container } from 'react-bootstrap';
 import FadeInSection from '../../components/FadeInSection';
 
+import "./Menu.scss";
+import CoffeeIcon from '@mui/icons-material/Coffee';
+import FastfoodIcon from '@mui/icons-material/Fastfood';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
+
 interface menuItemInterface {
   image: string,
   name: string,
@@ -81,13 +86,13 @@ const MenuContent = () => {
           <h1 className="mb-5">Most Popular Items</h1>
         </div>
         </FadeInSection>
-        
+
         <div className="tab-className text-center wow fadeInUp" data-wow-delay="0.1s">
           <FadeInSection>
             <ul className="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
               <li className="nav-item">
-                <a className="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
-                  <i className="fa fa-coffee fa-2x"></i>
+                <a className="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill">
+                  <CoffeeIcon />
                   <div className="ps-3">
                     <small className="text-body">Popular</small>
                     <h6 className="mt-n1 mb-0">Breakfast</h6>
@@ -95,8 +100,8 @@ const MenuContent = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
-                  <i className="fa fa-hamburger fa-2x"></i>
+                <a className="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill">
+                  <FastfoodIcon />
                   <div className="ps-3">
                     <small className="text-body">Special</small>
                     <h6 className="mt-n1 mb-0">Launch</h6>
@@ -104,8 +109,8 @@ const MenuContent = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
-                  <i className="fa fa-utensils fa-2x"></i>
+                <a className="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill">
+                  <RestaurantIcon />
                   <div className="ps-3">
                     <small className="text-body">Lovely</small>
                     <h6 className="mt-n1 mb-0">Dinner</h6>

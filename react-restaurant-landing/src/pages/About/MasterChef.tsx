@@ -43,19 +43,18 @@ const chefItems: ChecItemInterface[] = [
 
 const MasterChef = () => {
   return (
-    <FadeInSection>
-      <Container fluid className="container-xxl pt-5 pb-3">
-      
-        <div className="container">
-          <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h5 className="section-title secondary-title text-center fw-normal">Team Members</h5>
-            <h1 className="mb-5">Our Master Chefs</h1>
-          </div>
-          <div className="row g-4">
-            {chefItems.map((chefItem, index) => (
-              <div 
-                key={ index + chefItem.fullname }
-                className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+    <Container fluid className="container-xxl pt-5 pb-3">
+      <div className="container">
+        <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h5 className="section-title secondary-title text-center fw-normal">Team Members</h5>
+          <h1 className="mb-5">Our Master Chefs</h1>
+        </div>
+        <div className="row g-4">
+          {chefItems.map((chefItem, index) => (
+            <div 
+              key={ index + chefItem.fullname }
+              className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              {/* <FadeInSection> */}
                 <div className="team-item text-center rounded overflow-hidden">
                   <div className="rounded-circle overflow-hidden m-4">
                     <img className="img-fluid" src={ chefItem.profilePicture } alt=""/>
@@ -68,13 +67,14 @@ const MasterChef = () => {
                     <Button className="btn"><FaInstagram /></Button>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              {/* </FadeInSection> */}
+              
+            </div>
+          ))}
         </div>
-      
-      </Container>
-    </FadeInSection>
+      </div>
+    
+    </Container>
 
   )
 }
