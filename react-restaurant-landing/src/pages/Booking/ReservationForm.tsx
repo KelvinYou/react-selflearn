@@ -1,5 +1,4 @@
 import React from 'react'
-import VideoImage from "./../../assets/home/video.jpg";
 import FadeInSection from '../../components/FadeInSection';
 import { Button } from '@mui/material';
 
@@ -10,9 +9,9 @@ const ReservationForm = () => {
     <FadeInSection>
       <div className="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
         <div className="row g-0">
-          <div className="col-md-6">
-            <div className="reservation-image">
-              <img src={ VideoImage } />
+          <div className="col-md-6 reservation-image">
+            <div className="">
+              {/* <img src={ VideoImage } /> */}
             </div>
           </div>
           <div className="col-md-6 bg-dark d-flex align-items-center">

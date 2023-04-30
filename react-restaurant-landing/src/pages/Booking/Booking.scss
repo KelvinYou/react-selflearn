@@ -1,15 +1,14 @@
 @import "./../../styles/base/colors.scss";
 
-.reservation-image img {
-  width: auto;
-  object-fit: contain;
-  max-width: 100%;
+.reservation-image {
+  background-image: url("./../../assets/home/video.jpg");
+  background-size: 100% 100%;
 }
 
 
 
 .book-button {
-  background-color: $primary-color;
+  background-color: $primary-color !important;
   color: $light-color;
 
   &:hover {
